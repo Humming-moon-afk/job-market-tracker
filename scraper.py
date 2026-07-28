@@ -16,4 +16,5 @@ else:
     print("Kein Title-Tag gefunden")
 
 h1_tags = soup.find_all("h1")
-print(h1_tags)
+for tags in h1_tags:
+    print(tags.text)
