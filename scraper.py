@@ -2,7 +2,11 @@ import requests
 import bs4
 import time
 import random
+import json
+import csv
 
+
+all_jobs = []
 
 page = 1
 for i in range(page, 10):
@@ -11,7 +15,7 @@ for i in range(page, 10):
         headers = {
         "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
         }
-        data = requests.get(website, headers=headers)
+        data = requests.get(website, headers=headers, timeout=10)
         print(data.status_code)
     except Exception as e:
         print(f"Fehler: {e}")
@@ -39,5 +43,21 @@ for i in range(page, 10):
     # Nur echte Jobs ausgeben
         if title != "Kein Titel":
             print(f"Job: {title} | Firma: {company} | Ort: {location}")
+            all_jobs.append({
+                "title": title,
+                "company": company,
+                "location": location
+            })
+            
     times = random.uniform(2.5, 6.0)
     time.sleep(times)
+
+with open("jobs.json", "w", encoding="utf-8") as f:
+    json.dump(all_jobs, f, ensure_ascii=False, indent=4)
+
+fieldnames = ["title", "company", "location"]
+with open("jobs.csv", "w", newline="", encoding="utf-8-sig") as f:
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(all_jobs)
+print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
