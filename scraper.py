@@ -10,3 +10,10 @@ headers = {
 data = requests.get(website, headers=headers)
 print(data.status_code)
 soup = bs4.BeautifulSoup(data.text, "html.parser")
+if soup.title:
+    print(soup.title.text)
+else:
+    print("Kein Title-Tag gefunden")
+
+h1_tags = soup.find_all("h1")
+print(h1_tags)
