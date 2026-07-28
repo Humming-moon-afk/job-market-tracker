@@ -1,6 +1,9 @@
 import requests
 import bs4
 import time
+import random
+
+
 page = 1
 for i in range(page, 10):
     website = f"https://www.stepstone.de/jobs/werkstudent/in-68259-mannheim?whereType=autosuggest&radius=50&page={i}&searchOrigin=Resultlist_top-search"
@@ -32,4 +35,5 @@ for i in range(page, 10):
     # Nur echte Jobs ausgeben
         if title != "Kein Titel":
             print(f"Job: {title} | Firma: {company} | Ort: {location}")
-    time.sleep(3)
+    times = random.uniform(2.5, 6.0)
+    time.sleep(times)
