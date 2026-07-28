@@ -6,12 +6,16 @@ import random
 
 page = 1
 for i in range(page, 10):
-    website = f"https://www.stepstone.de/jobs/werkstudent/in-68259-mannheim?whereType=autosuggest&radius=50&page={i}&searchOrigin=Resultlist_top-search"
-    headers = {
-    "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
-    }
-    data = requests.get(website, headers=headers)
-    print(data.status_code)
+    try:
+        website = f"https://www.stepstone.de/jobs/werkstudent/in-68259-mannheim?whereType=autosuggest&radius=50&page={i}&searchOrigin=Resultlist_top-search"
+        headers = {
+        "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+        }
+        data = requests.get(website, headers=headers)
+        print(data.status_code)
+    except Exception as e:
+        print(f"Fehler: {e}")
+        continue
     soup = bs4.BeautifulSoup(data.text, "html.parser")
 
 
