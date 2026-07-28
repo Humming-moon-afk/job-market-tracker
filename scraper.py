@@ -9,14 +9,24 @@ headers = {
 data = requests.get(website, headers=headers)
 print(data.status_code)
 soup = bs4.BeautifulSoup(data.text, "html.parser")
-if soup.title:
-    print(soup.title.text)
-else:
-    print("Kein Title-Tag gefunden")
 
-h1_tags = soup.find_all("h1")
-for tags in h1_tags:
-    print(tags.text)
-job_links = soup.find_all("a", attrs={"data-testid" : "job-item-title"})
-for jobs in job_links:
-    print(jobs.text.strip())
+
+jobs_articles = soup.find_all("article")
+
+for job in jobs_articles:
+   # if job.find("a", attrs={"data-testid": "job-item-title"}):
+    #    print(job.prettify())
+     #   break
+    # Elements über data-at-Attribute suchen
+    title_element = job.find("a", attrs={"data-at": "job-item-title"})
+    company_element = job.find("span", attrs={"data-at": "job-item-company-name"})
+    location_element = job.find("span", attrs={"data-at": "job-item-location"})
+
+    # Text extrahieren
+    title = title_element.text.strip() if title_element else "Kein Titel"
+    company = company_element.text.strip() if company_element else "Keine Firma"
+    location = location_element.text.strip() if location_element else "Kein Ort"
+
+    # Nur echte Jobs ausgeben
+    if title != "Kein Titel":
+        print(f"Job: {title} | Firma: {company} | Ort: {location}")
