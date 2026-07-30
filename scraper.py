@@ -4,10 +4,15 @@ import time
 import random
 import json
 import csv
-
+import os
 
 all_jobs = []
+files_to_remove = ["jobs.csv", "jobs.json"]
 
+for file in files_to_remove:
+    if os.path.exists(file):
+        os.remove(file)
+        print(f"Alte Dateien wurden gelöscht: {file}")
 page = 1
 for i in range(page, 10):
     try:
