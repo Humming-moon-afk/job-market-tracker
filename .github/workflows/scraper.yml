@@ -1,0 +1,11 @@
+name: Daily Job Scraper
+
+
+on:
+    schedule:
+       - cron: '0 5 * * *'
+    workflow_dispatch:
+
+jobs:
+    scrape:
+        runs-on: ubuntu-latest
