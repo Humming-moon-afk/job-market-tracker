@@ -62,10 +62,6 @@ def write_csv(data):
 
 deletePath()
 scrapedData = scraper()
-write_csv(scrapedData)
-write_json(scrapedData)
-print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
-
 keywords = ["python", "java", "sql"]
 def filterFunction(scrapedData, keywords):
     filteredResults = []
@@ -75,3 +71,7 @@ def filterFunction(scrapedData, keywords):
                 filteredResults.append(data)
                 break
     return filteredResults
+filterScrap = filterFunction(scrapedData, keywords)
+write_csv(filterScrap)
+write_json(filterScrap)
+print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
