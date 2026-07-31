@@ -1,7 +1,5 @@
 # Job Market Tracker
 
-Ein automatisierter Scraper zur Aggregation und Filterung von IT-Werkstudentenstellen mit automatischer Duplikatvermeidung in PostgreSQL.
-
 ## Features
 
 * **Scraping & Parsing:** Extrahiert relevante Stellenausschreibungen via `requests` und `BeautifulSoup`.
