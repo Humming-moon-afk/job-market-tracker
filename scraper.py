@@ -50,15 +50,15 @@ def scraper():
 deletePath()
 scraper()
 scrapedData = scraper()
-def write_json():
+def write_json(data):
     with open("jobs.json", "w", encoding="utf-8") as f:
-        json.dump(scrapedData, f, ensure_ascii=False, indent=4)
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 fieldnames = ["title", "company", "location"]
-def write_csv():
+def write_csv(data):
     with open("jobs.csv", "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
-        writer.writerows(scrapedData)
+        writer.writerows(data)
 print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
 
