@@ -70,6 +70,16 @@
         "location": "Darmstadt bei Frankfurt am Main"
     },
     {
+        "title": "Werkstudent HR Consulting / Schwerpunkt Recruiting (m/w/d)",
+        "company": "Karriereskills GmbH",
+        "location": "Bruchsal"
+    },
+    {
+        "title": "Praktikant/Werkstudent (w/m/d) Baumanagement Objektüberwachung",
+        "company": "Drees & Sommer SE",
+        "location": "Mannheim"
+    },
+    {
         "title": "Werkstudent (m/w/d) KI & Digitalisierung im Einkauf",
         "company": "APL Automobil-Prüftechnik Landau GmbH",
         "location": "Landau bei Karlsruhe"
@@ -80,24 +90,9 @@
         "location": "Mannheim"
     },
     {
-        "title": "Praktikant/Werkstudent (w/m/d) Baumanagement Objektüberwachung",
-        "company": "Drees & Sommer SE",
-        "location": "Mannheim"
-    },
-    {
         "title": "Werkstudent (m/w/d) im Vertrieb",
         "company": "Horbach Wirtschaftsberatung GmbH",
         "location": "Dortmund, Düsseldorf, Köln, Mannheim, Heidelberg, Karlsruhe"
-    },
-    {
-        "title": "Werkstudent (w/m/d) 1st Level Service",
-        "company": "ENTEGA Plus GmbH",
-        "location": "Darmstadt bei Frankfurt am Main"
-    },
-    {
-        "title": "Werkstudent im Office und People Management (m/w/d)",
-        "company": "Pacura med GmbH",
-        "location": "Heidelberg"
     },
     {
         "title": "Werkstudent Kundenberatung ÖPNV (m/w/d)",
@@ -105,9 +100,34 @@
         "location": "Darmstadt"
     },
     {
+        "title": "Werkstudent im Office und People Management (m/w/d)",
+        "company": "Pacura med GmbH",
+        "location": "Heidelberg"
+    },
+    {
         "title": "Werkstudent (m/w/d) Vertrieb Service",
         "company": "ProMinent Deutschland GmbH",
         "location": "Heidelberg"
+    },
+    {
+        "title": "Werkstudent (w/m/d) 1st Level Service",
+        "company": "ENTEGA Plus GmbH",
+        "location": "Darmstadt bei Frankfurt am Main"
+    },
+    {
+        "title": "Werkstudent Vileda Customer Service (w/m/d)",
+        "company": "FHP Export GmbH",
+        "location": "Weinheim"
+    },
+    {
+        "title": "Werkstudent, Einkauf, Aftermarket (w/m/d)",
+        "company": "Vibracoustic Aftermarket GmbH",
+        "location": "Weinheim"
+    },
+    {
+        "title": "Pflichtpraktikant / Werkstudent im Bereich Employer Branding & Personalmarketing (w/m/d)",
+        "company": "Freudenberg Group",
+        "location": "Weinheim"
     },
     {
         "title": "Werkstudent (m/w/d) HR-Zeitwirtschaft & Prozessoptimierung",
@@ -120,34 +140,14 @@
         "location": "Rossdorf"
     },
     {
-        "title": "Werkstudent Vileda Customer Service (w/m/d)",
-        "company": "FHP Export GmbH",
-        "location": "Weinheim"
-    },
-    {
-        "title": "Pflichtpraktikant / Werkstudent im Bereich Employer Branding & Personalmarketing (w/m/d)",
-        "company": "Freudenberg Group",
-        "location": "Weinheim"
-    },
-    {
         "title": "Werkstudent Social Media Management (m/w/d)",
         "company": "INKA Medialine GmbH Medienagentur",
         "location": "Bensheim"
     },
     {
-        "title": "Werkstudent Office Management (m/w/d)",
-        "company": "Hays – Interne Karriere bei Uns",
-        "location": "Mannheim"
-    },
-    {
-        "title": "Werkstudent (m/w/d) Schwerpunkt Nachhaltigkeit/Gesamtbanksteuerung",
-        "company": "Vereinigte VR Bank Kur- und Rheinpfalz eG",
-        "location": "Speyer"
-    },
-    {
-        "title": "Werkstudent:in im Bereich Kundenservice & Betrieb (m/w/d)",
-        "company": "Bürgerwerke eG",
-        "location": "Heidelberg"
+        "title": "Werkstudent Personaleinsatzplanung / Audit & Assurance (m/w/d)",
+        "company": "Deloitte",
+        "location": "Berlin, Düsseldorf, Frankfurt (Main), Köln, Leipzig, Mannheim, Hamburg, Hannover, München, Nürnberg"
     },
     {
         "title": "Werkstudent / Praktikant (m/w/d) Bau- und Projektleitung schlüsselfertiger Hochbau",
@@ -155,9 +155,19 @@
         "location": "Mannheim / Hirschberg an der Bergstraße"
     },
     {
-        "title": "Werkstudent Personaleinsatzplanung / Audit & Assurance (m/w/d)",
-        "company": "Deloitte",
-        "location": "Berlin, Düsseldorf, Frankfurt (Main), Köln, Leipzig, Mannheim, Hamburg, Hannover, München, Nürnberg"
+        "title": "Werkstudent (m/w/d) Schwerpunkt Nachhaltigkeit/Gesamtbanksteuerung",
+        "company": "Vereinigte VR Bank Kur- und Rheinpfalz eG",
+        "location": "Speyer"
+    },
+    {
+        "title": "Werkstudent Office Management (m/w/d)",
+        "company": "Hays – Interne Karriere bei Uns",
+        "location": "Mannheim"
+    },
+    {
+        "title": "Werkstudent:in im Bereich Kundenservice & Betrieb (m/w/d)",
+        "company": "Bürgerwerke eG",
+        "location": "Heidelberg"
     },
     {
         "title": "Praktikant / Werkstudent im Bereich Social Media (m/w/d)",
@@ -195,14 +205,14 @@
         "location": "Mannheim"
     },
     {
-        "title": "Werkstudent/in HR-Kommunikation & Change (m/w/d)",
-        "company": "BAUHAUS",
-        "location": "Mannheim"
-    },
-    {
         "title": "Werkstudent Application Engineering Processes (m/w/x)",
         "company": "ZEISS",
         "location": "Rossdorf"
+    },
+    {
+        "title": "Werkstudent/in HR-Kommunikation & Change (m/w/d)",
+        "company": "BAUHAUS",
+        "location": "Mannheim"
     },
     {
         "title": "Werkstudent (w/m/d) Office Management",
@@ -230,14 +240,14 @@
         "location": "Germersheim"
     },
     {
-        "title": "Werkstudent (m/w/d) Unternehmenskommunikation - Schwerpunkt Social Media",
-        "company": "GBG Unternehmensgruppe GmbH",
-        "location": "Mannheim"
-    },
-    {
         "title": "Studentenjob im Logistikzentrum Teilzeit (m/w/d)",
         "company": "Lidl Speyer Betrieb",
         "location": "Speyer"
+    },
+    {
+        "title": "Werkstudent (m/w/d) Unternehmenskommunikation - Schwerpunkt Social Media",
+        "company": "GBG Unternehmensgruppe GmbH",
+        "location": "Mannheim"
     },
     {
         "title": "Werkstudent im Bereich IT (m/w/d)",
@@ -255,19 +265,9 @@
         "location": "Frankfurt/Main, Berlin, Düsseldorf, Hamburg, Hannover, Mannheim, Stuttgart, München, Freiburg, Köln"
     },
     {
-        "title": "Flexible studentische Beschäftigung im Global Logistics Center Germersheim sowie am Außenstandort Offenbach a.d. Queich Wintersemester 2026/2027",
-        "company": "Mercedes-Benz AG",
-        "location": "Germersheim, Offenbach an der Queich"
-    },
-    {
         "title": "Werkstudent Vergütung / Steuerberatung (w/m/d)",
         "company": "EY Deutschland",
         "location": "Berlin,Frankfurt/Main, Köln, München, Stuttgart, Düsseldorf, Hamburg, Freiburg, Nürnberg, Mannheim"
-    },
-    {
-        "title": "Werksstudent Purchasing (m/w/d)",
-        "company": "MANN+HUMMEL GmbH",
-        "location": "Speyer"
     },
     {
         "title": "Werkstudent Vertrieb B2B (m/w/d)",
@@ -275,19 +275,19 @@
         "location": "Mannheim"
     },
     {
-        "title": "Werkstudent, Einkauf, Aftermarket (w/m/d)",
-        "company": "Vibracoustic Aftermarket GmbH",
-        "location": "Weinheim"
+        "title": "Flexible studentische Beschäftigung im Global Logistics Center Germersheim sowie am Außenstandort Offenbach a.d. Queich Wintersemester 2026/2027",
+        "company": "Mercedes-Benz AG",
+        "location": "Germersheim, Offenbach an der Queich"
+    },
+    {
+        "title": "Werksstudent Purchasing (m/w/d)",
+        "company": "MANN+HUMMEL GmbH",
+        "location": "Speyer"
     },
     {
         "title": "Werkstudent IT-Projektsupport (m/w/d)",
         "company": "Mauser Packaging Solutions",
         "location": "Brühl bei Köln"
-    },
-    {
-        "title": "Werkstudent (w/m/d) Industry Marketing Transportation & Mobility",
-        "company": "Dassault Systemes Deutschland GmbH",
-        "location": "Stuttgart-Vaihingen, Darmstadt"
     },
     {
         "title": "Werkstudent (m/w/d) im Bereich Accounting",
@@ -355,6 +355,11 @@
         "location": "Heidelberg, Mannheim"
     },
     {
+        "title": "Alltagshelfer/in für Senioren Minijob - Baden-Württemberg",
+        "company": "JUHI GmbH",
+        "location": "Freiburg im Breisgau, Mannheim, Karlsruhe, Stuttgart"
+    },
+    {
         "title": "Studentische Aushilfe (w/m/d) Community Betreuung",
         "company": "Avendis GmbH",
         "location": "Berlin, Bremen, Cottbus, Düsseldorf, Fulda, Greven, Home Office, Mannheim, München, Westerstede"
@@ -375,11 +380,6 @@
         "location": "Mannheim, Ludwigshafen"
     },
     {
-        "title": "Alltagshelfer/in für Senioren Minijob - Baden-Württemberg",
-        "company": "JUHI GmbH",
-        "location": "Freiburg im Breisgau, Mannheim, Karlsruhe, Stuttgart"
-    },
-    {
         "title": "Werkstudent FTTX Bauüberwachung Planung",
         "company": "Christoph Meurer GmbH",
         "location": "Darmstadt, Deutschland"
@@ -390,17 +390,7 @@
         "location": "Mannheim"
     },
     {
-        "title": "WERKSTUDENT (M/W/X)",
-        "company": "Fitness Park Verwaltungs GmbH",
-        "location": "Schwetzingen"
-    },
-    {
-        "title": "Werkstudent KI & LLM (m/w/d)",
-        "company": "Erste Hilfe & Brandschutz Service Knecht GbR",
-        "location": "Bensheim"
-    },
-    {
-        "title": "Werkstudent Feuerwehrbedarfsplanung (m/w/d)",
+        "title": "Werkstudent Unternehmensentwicklung (m/w/d)",
         "company": "Erste Hilfe & Brandschutz Service Knecht GbR",
         "location": "Bensheim"
     },
@@ -410,17 +400,27 @@
         "location": "Bensheim"
     },
     {
+        "title": "Werkstudent Akademie - Organisation & Kurslogistik (m/w/d)",
+        "company": "Erste Hilfe & Brandschutz Service Knecht GbR",
+        "location": "Bensheim"
+    },
+    {
         "title": "Werkstudent Medizin - Ausbilder Erste Hilfe (m/w/d)",
         "company": "Erste Hilfe & Brandschutz Service Knecht GbR",
         "location": "Bensheim"
     },
     {
-        "title": "Werkstudent Unternehmensentwicklung (m/w/d)",
+        "title": "Werkstudent KI & LLM (m/w/d)",
         "company": "Erste Hilfe & Brandschutz Service Knecht GbR",
         "location": "Bensheim"
     },
     {
-        "title": "Werkstudent Akademie - Organisation & Kurslogistik (m/w/d)",
+        "title": "WERKSTUDENT (M/W/X)",
+        "company": "Fitness Park Verwaltungs GmbH",
+        "location": "Schwetzingen"
+    },
+    {
+        "title": "Werkstudent Feuerwehrbedarfsplanung (m/w/d)",
         "company": "Erste Hilfe & Brandschutz Service Knecht GbR",
         "location": "Bensheim"
     },
@@ -445,9 +445,9 @@
         "location": "Heidelberg"
     },
     {
-        "title": "Praktikant / Werkstudent im Bereich Logistikplanung / SCM / Beratung (w/m/d)",
-        "company": "famed.io Inh. Hubertus Maximilian Weber",
-        "location": "Heidelberg"
+        "title": "Werkstudent:in (m/w/d) Projektarbeit & Produktentwicklung",
+        "company": "Folivora Energy GmbH",
+        "location": "Darmstadt"
     },
     {
         "title": "Werkstudent Buchhaltung (m/w/d)",
@@ -455,12 +455,17 @@
         "location": "Bensheim"
     },
     {
-        "title": "Werkstudent Medieninformatik (m/w/d)",
+        "title": "Praktikant / Werkstudent im Bereich Logistikplanung / SCM / Beratung (w/m/d)",
+        "company": "famed.io Inh. Hubertus Maximilian Weber",
+        "location": "Heidelberg"
+    },
+    {
+        "title": "Werkstudent Personal (m/w/d)",
         "company": "Erste Hilfe & Brandschutz Service Knecht GbR",
         "location": "Bensheim"
     },
     {
-        "title": "Werkstudent Personal (m/w/d)",
+        "title": "Werkstudent Medieninformatik (m/w/d)",
         "company": "Erste Hilfe & Brandschutz Service Knecht GbR",
         "location": "Bensheim"
     },
@@ -485,14 +490,14 @@
         "location": "Darmstadt"
     },
     {
-        "title": "Studenten- und Abiturientenjobs in Mannheim und Umgebung",
-        "company": "Heldenschmiede GmbH",
-        "location": "Mannheim"
-    },
-    {
         "title": "Pädagogische Fachkraft, Pädagoge bzw. Nachhilfelehrer (m/w/d) im LOS",
         "company": "Dienst!AG/LOS-Verbund",
         "location": "Bruchsal"
+    },
+    {
+        "title": "Studenten- und Abiturientenjobs in Mannheim und Umgebung",
+        "company": "Heldenschmiede GmbH",
+        "location": "Mannheim"
     },
     {
         "title": "Werkstudent*in HR (m/w/d)",
@@ -525,19 +530,14 @@
         "location": "Mannheim"
     },
     {
-        "title": "Werkstudent/-in Medizin (m/w/d) - Digital Health, Klinische Studien Onkologie",
-        "company": "Iuvando Health GmbH",
-        "location": "Mannheim, Deutschland"
-    },
-    {
         "title": "Sales Development Representative / SDR (m/w/d) Werkstudent (Remote)",
         "company": "Movyng Media UG (haftungsbeschränkt)",
         "location": "Darmstadt"
     },
     {
-        "title": "Werkstudent:in Sales Development Representative (m/w/d) 20+ Stunden/ Woche",
-        "company": "Photovate GmbH",
-        "location": "Mannheim"
+        "title": "Werkstudent/-in Medizin (m/w/d) - Digital Health, Klinische Studien Onkologie",
+        "company": "Iuvando Health GmbH",
+        "location": "Mannheim, Deutschland"
     },
     {
         "title": "Werkstudent Logistik (all genders) - (20 Std./Woche)",
@@ -545,9 +545,14 @@
         "location": "Mannheim"
     },
     {
-        "title": "Werkstudent:in (m/w/d) Projektarbeit & Produktentwicklung",
-        "company": "Folivora Energy GmbH",
-        "location": "Darmstadt"
+        "title": "Werkstudent:in Sales Development Representative (m/w/d) 20+ Stunden/ Woche",
+        "company": "Photovate GmbH",
+        "location": "Mannheim"
+    },
+    {
+        "title": "Working student automation (m/f/d) for ERS Europe Systems in Lorsch",
+        "company": "ERS EuRope-Systems GmbH",
+        "location": "64653 Lorsch, Germany"
     },
     {
         "title": "Werkstudent/in Marketing (m/w/d)",
@@ -565,11 +570,6 @@
         "location": "Heidelberg"
     },
     {
-        "title": "Working student automation (m/f/d) for ERS Europe Systems in Lorsch",
-        "company": "ERS EuRope-Systems GmbH",
-        "location": "64653 Lorsch, Germany"
-    },
-    {
         "title": "Student zum Bachelor of Arts (BA) - Soziale Arbeit im Gesundheitswesen (m/w/d)",
         "company": "INOWIA GmbH",
         "location": "Kraichtal-Oberöwisheim"
@@ -580,9 +580,19 @@
         "location": "Heidelberg"
     },
     {
+        "title": "MITARBEITER IM SERVICE MINIJOB-BASIS (M/W/D)",
+        "company": "Fitness Park Verwaltungs GmbH",
+        "location": "Schwetzingen"
+    },
+    {
         "title": "Studentische Hilfskraft (m/w/d)",
         "company": "KuA-Consult Ingenieurges. mbH",
         "location": "Darmstadt"
+    },
+    {
+        "title": "Alltagshilfe in Heidelberg und Umgebung gesucht! (Minijob, Werkstudierendenjob oder Aktivrente)",
+        "company": "Care Companion GmbH",
+        "location": "Heidelberg"
     },
     {
         "title": "Praktikum | Marketing-Strategie, SEO & Content (m/w/d)",
@@ -593,11 +603,6 @@
         "title": "Studentische Aushilfe (w/m/d)",
         "company": "Dr. med. Madeleine Busch und Wolfgang Reeh",
         "location": "Oppenheim"
-    },
-    {
-        "title": "MITARBEITER IM SERVICE MINIJOB-BASIS (M/W/D)",
-        "company": "Fitness Park Verwaltungs GmbH",
-        "location": "Schwetzingen"
     },
     {
         "title": "Call Agent Schüler und Studenten (m/w/d) für die Terminierung in Worms gesucht!",
@@ -665,19 +670,14 @@
         "location": "Bremen, Köln, Berlin, München, Paderborn, Home-Office"
     },
     {
-        "title": "Werkstudent (m/w/d) Reisekosten & Finance",
-        "company": "Dataciders GmbH",
-        "location": "Dortmund, Home-Office"
+        "title": "Werkstudent (m/w/d) Performance Marketing",
+        "company": "enthus",
+        "location": "bundesweit, Home-Office"
     },
     {
         "title": "Werkstudent (m/w/d) Sales Support und Kundenbeziehungen",
         "company": "Johner Institut GmbH",
         "location": "Konstanz, Frankfurt, bundesweit, Home Office"
-    },
-    {
-        "title": "Werkstudent (m/w/d) Performance Marketing",
-        "company": "enthus",
-        "location": "bundesweit, Home-Office"
     },
     {
         "title": "Werkstudent/Praktikant (m/w/d) Marketing Automation",

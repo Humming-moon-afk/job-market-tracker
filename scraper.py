@@ -17,6 +17,7 @@ def scraper():
     jobs = list()
     for i in range(page, 10):
         try:
+
             website = f"https://www.stepstone.de/jobs/werkstudent/in-68259-mannheim?whereType=autosuggest&radius=50&page={i}&searchOrigin=Resultlist_top-search"
             headers = {
             "User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
@@ -64,3 +65,13 @@ scrapedData = scraper()
 write_csv(scrapedData)
 write_json(scrapedData)
 print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
+
+keywords = ["python", "java", "sql"]
+def filterFunction(scrapedData, keywords):
+    filteredResults = []
+    for data in scrapedData:
+        for keyword in keywords:
+            if((keyword) in data["title"].lower()):
+                filteredResults.append(data)
+                break
+    return filteredResults
