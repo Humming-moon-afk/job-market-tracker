@@ -6,6 +6,13 @@ import json
 import csv
 import os
 
+DB_CONFIG = {
+    "dbname": "jobmarket_scraper",
+    "user": "postgres",
+    "password": "1234",
+    "host": "localhost",
+    "port": "5432"
+}
 files_to_remove = ["jobs.csv", "jobs.json"]
 def deletePath():
     for file in files_to_remove:
