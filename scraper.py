@@ -5,14 +5,29 @@ import random
 import json
 import csv
 import os
+import psycopg2
 
 DB_CONFIG = {
-    "dbname": "jobmarket_scraper",
+    "dbname": "fhir_db",
     "user": "postgres",
-    "password": "1234",
+    "password": "postgres",
     "host": "localhost",
     "port": "5432"
 }
+
+def init_db():
+    with psycopg2.connect(**DB_CONFIG) as conn:  
+        with conn.cursor() as cur:
+            cur.execute("""
+                CREATE TABLE IF NOT EXISTS jobs (
+                    id SERIAL PRIMARY KEY,
+                    title VARCHAR(255),
+                    company VARCHAR(255),
+                    location VARCHAR(255),
+                    CONSTRAINT unique_job UNIQUE(title, company, location)
+                );
+            """)
+            print("DB 'jobs' ist bereit.")
 files_to_remove = ["jobs.csv", "jobs.json"]
 def deletePath():
     for file in files_to_remove:
@@ -108,11 +123,28 @@ def filterFunction(scrapedData, keywords):
                     filteredResults.append(data)
                     break
     return filteredResults
+def save_to_postgres(data):
+    if not data:
+        print("nichts zum speichern vorhanden")
+        return
+    job_tuples = [(job["title"], job["company"], job["location"]) for job in data]
+    insert_query = """
+        INSERT INTO jobs(title, company, location)
+        VALUES(%s,%s,%s)
+        ON CONFLICT(title, company, location) DO NOTHING;
+    """
+
+
+    with psycopg2.connect(**DB_CONFIG) as conn:
+        with conn.cursor() as cur:
+            cur.executemany(insert_query, job_tuples)
+            print(f"PostgreSQL: {cur.rowcount} neue Jobs")
+
+init_db()
 deletePath()
 scrapedData = scraper()
 filterScrap = filterFunction(scrapedData, keywords)
+save_to_postgres(filterScrap)
 write_csv(filterScrap)
 write_json(filterScrap)
-print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
-
-
+print("Fertig, jobs.json und jobs.csv und DB wurden erfolgreich gespeichert")
