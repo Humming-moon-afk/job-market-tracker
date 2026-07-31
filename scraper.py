@@ -62,7 +62,13 @@ def write_csv(data):
 
 deletePath()
 scrapedData = scraper()
-keywords = ["python", "java", "sql"]
+keywords = [
+    "python", "java", "javascript", "typescript", "c++", "c#", "php", "sql", "html", "css",
+    "react", "angular", "vue", "django", "spring", "docker", "kubernetes", "aws", "azure", "git",
+    "informatik", "software", "developer", "entwickler", "frontend", "backend", "fullstack",
+    "devops", "data science", "data engineer", "ki", "ai", "llm", "sysadmin", "it-", "it ",
+    "medieninformatik", "systemplaner", "automation"
+]
 def filterFunction(scrapedData, keywords):
     filteredResults = []
     for data in scrapedData:
