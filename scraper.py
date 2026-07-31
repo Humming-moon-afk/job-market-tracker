@@ -47,9 +47,7 @@ def scraper():
         times = random.uniform(2.5, 6.0)
         time.sleep(times)
     return jobs
-deletePath()
-scraper()
-scrapedData = scraper()
+
 def write_json(data):
     with open("jobs.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
@@ -60,5 +58,9 @@ def write_csv(data):
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(data)
-print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
 
+deletePath()
+scrapedData = scraper()
+write_csv(scrapedData)
+write_json(scrapedData)
+print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
