@@ -63,21 +63,53 @@ def write_csv(data):
 deletePath()
 scrapedData = scraper()
 keywords = [
-    "python", "java", "javascript", "typescript", "c++", "c#", "php", "sql", "html", "css",
-    "react", "angular", "vue", "django", "spring", "docker", "kubernetes", "aws", "azure", "git",
-    "informatik", "software", "developer", "entwickler", "frontend", "backend", "fullstack",
-    "devops", "data science", "data engineer", "ki", "ai", "llm", "sysadmin", "it-", "it ",
-    "medieninformatik", "systemplaner", "automation"
+    # 1. Programmiersprachen und Skriptsprachen
+    "python", "java", "javascript", "typescript", "c++", "c#", "php", "sql", "r", "rust", 
+    "go", "kotlin", "swift", "scala", "bash", "powershell", "ruby", "dart", "matlab", "html", "css",
+    
+    # 2. Data Frameworks
+    "spring", "spring boot", "react", "angular", "vue", "svelte", "next.js", "django", "flask", 
+    "fastapi", "express", "dotnet", ".net", "laravel", "symfony", "pandas", "numpy", "pytorch", 
+    "tensorflow", "scikit-learn", "ollama", "llama", "langchain", "pgvector", "embeddings", "rag",
+    
+    # 3. Tools
+    "postgresql", "postgres", "mysql", "mongodb", "redis", "sqlite", "oracle", "elasticsearch", 
+    "mariadb", "aws", "azure", "gcp", "docker", "kubernetes", "git", "github", "gitlab", 
+    "terraform", "ansible", "jenkins", "linux", "unix", "ci/cd", "rest", "graphql", "api",
+    
+    # 4. IT roles
+    "informatik", "medieninformatik", "medizininformatik", "software", "developer", "entwickler", 
+    "frontend", "backend", "fullstack", "devops", "sysadmin", "administrator", "data science", 
+    "data engineer", "data analyst", "ki", "ai", "llm", "machine learning", "deep learning", 
+    "security", "cyber", "it-", "it ", "cloud", "web", "testing", "qa", "agile", "scrum", 
+    "kanban", "automation", "systemplaner", "netzwerk",
+    
+    # Standards
+    "fhir", "hl7", "hapi", "ekg", "bio-signal", "time-series", "zeitreihen", "e-health", 
+    "digital health", "medizin", "medizintechnik", "biomedical", "lab", "klinik",
+    
+    # Arbeitsgeber
+    "roche", "sap", "siemens", "healthineers", "abb", "mvv", "fuchs", "bilfinger", "hays", 
+    "ey", "pwc", "kpmg", "deloitte", "mercedes", "daimler", "zeiss", "edeka", "lufthansa", 
+    "deutsche bahn", "bosch", "freudenberg", "chg-meridian", "goldbeck", "io-consultants", 
+    "comselect", "d-fine", "contact software", "locate-risk", "acteno", "alpine eagle",
+    # Standort
+    "mannheim", "heidelberg", "walldorf", "ludwigshafen", "darmstadt", "karlsruhe", 
+    "speyer", "kronau", "ladenburg", "schwetzingen", "bensheim", "bruchsal", "frankfurt", 
+    "remote", "homeoffice", "home-office"
 ]
 def filterFunction(scrapedData, keywords):
     filteredResults = []
     for data in scrapedData:
-        for keyword in keywords:
-            if((keyword) in data["title"].lower()):
-                filteredResults.append(data)
-                break
+            search_text = f"{data['title']} {data['company']} {data['location']}".lower()
+            for keyword in keywords:
+                if((keyword) in search_text):
+                    filteredResults.append(data)
+                    break
     return filteredResults
 filterScrap = filterFunction(scrapedData, keywords)
 write_csv(filterScrap)
 write_json(filterScrap)
 print("Fertig, jobs.json und jobs.csv wurden erfolgreich gespeichert")
+
+
