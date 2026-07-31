@@ -9,3 +9,15 @@ on:
 jobs:
     scrape:
         runs-on: ubuntu-latest
+        steps:
+           - name: Checkout Code
+             uses: actions/checkout@v4
+           - name: Setup Python
+             uses: actions/setup-python@v5
+             with:
+                python-version: "3.11"
+
+           - name: Install Dependencies
+             run: pip install requests bs4 psycopgc2-binary
+           - name: Run scraper
+             run: python scraper.py
