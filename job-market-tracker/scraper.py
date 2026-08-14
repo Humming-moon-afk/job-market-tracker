@@ -19,10 +19,23 @@ def create_table():
             id SERIAL PRIMARY KEY,
             url TEXT UNIQUE,
             title VARCHAR(255),
-            location VARCHAR(255),
+         
+               location VARCHAR(255),
             company VARCHAR(255)
             );
             """)
+
+
+
+def save_to_db(jobs):
+    with psycopg2.connect(**DB_CONFIG) as connector:
+        with connector.cursor() as cursor:
+            job_data = [(j["title"], j["url"], j["company"], j["location"]) for j in jobs]
+            cursor.executemany("""INSERT INTO jobs (title, url, company, location) VALUES (%s, %s, %s, %s) ON CONFLICT (url) DO NOTHING;
+            """, job_data)
+
+
+
 
 def fetch_page(url):
     headers = {
@@ -42,7 +55,34 @@ def fetch_page(url):
 
 
 
+def parse_jobs(html_content):
+    if not html_content:
+        return []
+    jobs = []
+    soup = BeautifulSoup(html_content, "html.parser")
+    articles = soup.find_all("article")
+    for article in articles:
+        # fetch data
+        title_tag = article.find(attrs={"data-at": "job-item-title"})
+        company_tag = article.find(attrs={"data-at": "job-item-company-name"})
+        location_tag = article.find(attrs={"data-at": "job-item-location"})
+        # test
+        title = title_tag.text.strip() if title_tag else ""
+        url = title_tag.get("href") if title_tag else ""
+        if url.startswith("/"):
+            url = "https://www.stepstone.de" + url
+        company = company_tag.text.strip() if company_tag else ""
+        location = location_tag.text.strip() if location_tag else ""
+        if title and url:
+            jobs.append({"title": title, "url": url, "company": company, "location": location})
+    return jobs
 
+
+
+
+
+create_table()
 html = fetch_page("https://www.stepstone.de/jobs/werkstudent-in/in-deutschland?radius=30&searchOrigin=Resultlist_top-search&whatType=autosuggest&q=Werkstudent%2Fin")
-# print(html)
-
+jobs = parse_jobs(html)
+save_to_db(jobs)
+print("Alle Jobs erfolgreich in der Datenbank gespeichert!")
