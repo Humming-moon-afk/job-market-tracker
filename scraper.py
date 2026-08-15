@@ -2,6 +2,9 @@ import os
 import psycopg2
 from bs4 import BeautifulSoup
 from curl_cffi import requests
+import time
+import random
+from random import uniform
 
 DB_CONFIG = {
     "dbname": os.getenv("DB_NAME", "job_market_db"),
@@ -82,7 +85,25 @@ def parse_jobs(html_content):
 
 
 create_table()
-html = fetch_page("https://www.stepstone.de/jobs/werkstudent-in/in-deutschland?radius=30&searchOrigin=Resultlist_top-search&whatType=autosuggest&q=Werkstudent%2Fin")
-jobs = parse_jobs(html)
-save_to_db(jobs)
-print("Alle Jobs erfolgreich in der Datenbank gespeichert!")
+
+
+for page in range(1, 51):
+
+    # Zukünftige Keyword zulegung:
+    # city = ["Mannheim", "Ludwigshafen"]
+    # per fString z.B. 
+    # f"https://www.stepstone.de/jobs/werkstudent-in/
+    # hier --> in-deutschland?whatType=autosuggest&
+    # radius=30&page={page}&q=Werkstudent%2fin&
+    # searchOrigin=Resultlist_top-search"
+    # zu   --> in-{city}
+    
+    url = f"https://www.stepstone.de/jobs/werkstudent-in/in-deutschland?whatType=autosuggest&radius=30&page={page}&q=Werkstudent%2fin&searchOrigin=Resultlist_top-search"
+    html = fetch_page(url)
+    jobs = parse_jobs(html)
+    if len(jobs) == 0:
+        print("Keine weiteren jobs verfügbar")
+        break
+    save_to_db(jobs)
+    print(f"Seite {page}: {len(jobs)} Jobs verarbeitet")
+    time.sleep(random.uniform(2, 4))
