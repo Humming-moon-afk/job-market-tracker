@@ -5,6 +5,7 @@ from curl_cffi import requests
 import time
 import random
 from random import uniform
+import schedule
 
 DB_CONFIG = {
     "dbname": os.getenv("DB_NAME", "job_market_db"),
@@ -84,10 +85,9 @@ def parse_jobs(html_content):
 
 
 
-create_table()
 
-
-for page in range(1, 51):
+def run_scraper():
+    for page in range(1, 51):
 
     # Zukünftige Keyword zulegung:
     # city = ["Mannheim", "Ludwigshafen"]
@@ -98,12 +98,23 @@ for page in range(1, 51):
     # searchOrigin=Resultlist_top-search"
     # zu   --> in-{city}
     
-    url = f"https://www.stepstone.de/jobs/werkstudent-in/in-deutschland?whatType=autosuggest&radius=30&page={page}&q=Werkstudent%2fin&searchOrigin=Resultlist_top-search"
-    html = fetch_page(url)
-    jobs = parse_jobs(html)
-    if len(jobs) == 0:
-        print("Keine weiteren jobs verfügbar")
-        break
-    save_to_db(jobs)
-    print(f"Seite {page}: {len(jobs)} Jobs verarbeitet")
-    time.sleep(random.uniform(2, 4))
+        url = f"https://www.stepstone.de/jobs/werkstudent-in/in-deutschland?whatType=autosuggest&radius=30&page={page}&q=Werkstudent%2fin&searchOrigin=Resultlist_top-search"
+        html = fetch_page(url)
+        jobs = parse_jobs(html)
+        if len(jobs) == 0:
+            print("Keine weiteren jobs verfügbar")
+            break
+        save_to_db(jobs)
+        print(f"Seite {page}: {len(jobs)} Jobs verarbeitet")
+        time.sleep(random.uniform(2, 4))
+
+
+create_table()
+run_scraper()
+
+# läuft jetzt jede Stunde
+
+schedule.every(1).hours.do(run_scraper)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
