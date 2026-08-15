@@ -15,6 +15,15 @@ DB_CONFIG = {
 def connect_to_db():
     with psycopg2.connect(**DB_CONFIG) as connector:
         df = pd.read_sql_query("SELECT * FROM jobs;", connector)
+    return df
 
-connect_to_db()
+df = connect_to_db()
 
+top_companies = (df["company"].value_counts().head(10))
+
+top_companies.plot(kind="barh", color="royalblue")
+plt.title("Top 10 Arbeitsgeber für Werkstudenten")
+plt.xlabel("Anzahl der Stellen")
+plt.ylabel("Unternehmen")
+plt.tight_layout()
+plt.savefig("top_companies.png")
