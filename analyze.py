@@ -10,3 +10,11 @@ DB_CONFIG = {
     "host": os.getenv("DB_HOST", "localhost"),
     "port": os.getenv("DB_PORT", "5432")
 }
+
+
+def connect_to_db():
+    with psycopg2.connect(**DB_CONFIG) as connector:
+        df = pd.read_sql_query("SELECT * FROM jobs;", connector)
+
+connect_to_db()
+
